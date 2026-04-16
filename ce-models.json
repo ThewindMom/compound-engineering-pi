@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ThewindMom/compound-engineering-pi/main/docs/ce-models.schema.json",
+  "description": "Copy this file to ~/.pi/agent/compound-engineering/ce-models.json to override Compound Engineering subagent model routing globally.",
+  "defaults": {
+    "thinking": "medium"
+  },
+  "roles": {
+    "research": {
+      "thinking": "high"
+    },
+    "review": {
+      "thinking": "medium"
+    },
+    "document-review": {
+      "thinking": "medium"
+    },
+    "workflow": {
+      "thinking": "medium"
+    },
+    "docs": {
+      "thinking": "low"
+    },
+    "design": {
+      "thinking": "medium"
+    }
+  },
+  "agents": {
+    "coherence-reviewer": {
+      "model": "haiku"
+    },
+    "scope-guardian-reviewer": {
+      "model": "sonnet"
+    },
+    "security-lens-reviewer": {
+      "model": "sonnet"
+    },
+    "design-lens-reviewer": {
+      "model": "sonnet"
+    },
+    "slack-researcher": {
+      "model": "sonnet"
+    }
+  }
+}

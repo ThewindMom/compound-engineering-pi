@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ThewindMom/compound-engineering-pi/main/docs/ce-models.schema.json",
+  "title": "compound-engineering-pi model config",
+  "type": "object",
+  "properties": {
+    "description": { "type": "string" },
+    "defaults": { "$ref": "#/$defs/modelSettings" },
+    "roles": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/modelSettings" }
+    },
+    "agents": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/modelSettings" }
+    }
+  },
+  "$defs": {
+    "modelSettings": {
+      "type": "object",
+      "properties": {
+        "model": { "type": "string" },
+        "provider": { "type": "string" },
+        "thinking": {
+          "type": "string",
+          "enum": ["off", "minimal", "low", "medium", "high", "xhigh"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

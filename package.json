@@ -1,0 +1,63 @@
+{
+  "name": "compound-engineering-pi",
+  "version": "2.66.1",
+  "type": "module",
+  "private": false,
+  "description": "Maintained Pi adapter for Compound Engineering with model-aware subagents and automated upstream sync.",
+  "license": "MIT",
+  "author": "ThewindMom",
+  "homepage": "https://github.com/ThewindMom/compound-engineering-pi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThewindMom/compound-engineering-pi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThewindMom/compound-engineering-pi/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "compound-engineering",
+    "compound-engineering-plugin",
+    "subagent",
+    "mcporter"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "ce-models.json",
+    "extensions",
+    "prompts",
+    "skills",
+    "scripts",
+    "src",
+    "docs",
+    "pi-resources",
+    "upstream.lock.json"
+  ],
+  "scripts": {
+    "build:upstream": "node scripts/build-from-upstream.mjs",
+    "sync:upstream": "node scripts/sync-upstream.mjs",
+    "release:from-merge": "node scripts/release-from-merge.mjs",
+    "test": "node --test",
+    "verify": "npm run test"
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "@sinclair/typebox": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ],
+    "skills": [
+      "./skills"
+    ],
+    "prompts": [
+      "./prompts"
+    ]
+  }
+}

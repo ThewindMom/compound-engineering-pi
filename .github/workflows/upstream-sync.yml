@@ -1,0 +1,46 @@
+name: Upstream Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync upstream
+        id: sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/sync-upstream.mjs
+
+      - name: Create or update sync PR
+        if: steps.sync.outputs.upstream_changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automation/upstream-sync
+          commit-message: 'chore: sync upstream to ${{ steps.sync.outputs.upstream_tag }}'
+          title: 'chore: sync upstream to ${{ steps.sync.outputs.upstream_tag }}'
+          body: |
+            Automated upstream sync for `${{ steps.sync.outputs.upstream_tag }}`.
+
+            - Regenerated Pi package assets from upstream Compound Engineering
+            - Updated `upstream.lock.json`
+            - Updated generated release notes in `docs/generated-release-notes.md`
+          labels: |
+            automation
+            upstream-sync
+          delete-branch: true

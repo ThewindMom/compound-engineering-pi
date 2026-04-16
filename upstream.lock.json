@@ -1,0 +1,17 @@
+{
+  "upstream": {
+    "owner": "EveryInc",
+    "repo": "compound-engineering-plugin",
+    "pluginPath": "plugins/compound-engineering",
+    "tag": "compound-engineering-v2.66.1",
+    "version": "2.66.1",
+    "commit": "ee86dc3379a75c859313d3c93c7cba6789957947",
+    "releaseName": "compound-engineering: v2.66.1",
+    "releasedAt": "2026-04-16T00:43:14Z",
+    "sourceOfTruth": "https://github.com/EveryInc/compound-engineering-plugin"
+  },
+  "adapter": {
+    "generatedAt": "2026-04-16T21:39:37.062Z",
+    "generator": "scripts/build-from-upstream.mjs"
+  }
+}
