@@ -3,15 +3,15 @@
     "owner": "EveryInc",
     "repo": "compound-engineering-plugin",
     "pluginPath": "plugins/compound-engineering",
-    "tag": "compound-engineering-v2.66.1",
-    "version": "2.66.1",
-    "commit": "ee86dc3379a75c859313d3c93c7cba6789957947",
-    "releaseName": "compound-engineering: v2.66.1",
-    "releasedAt": "2026-04-16T00:43:14Z",
+    "tag": "compound-engineering-v3.13.1",
+    "version": "3.13.1",
+    "commit": "20f1ab613ad2a7df196f1b4ac6c12bbb2bd2c2f9",
+    "releaseName": "compound-engineering: v3.13.1",
+    "releasedAt": "2026-06-17T19:00:11Z",
     "sourceOfTruth": "https://github.com/EveryInc/compound-engineering-plugin"
   },
   "adapter": {
-    "generatedAt": "2026-04-16T21:39:37.062Z",
+    "generatedAt": "2026-06-23T10:05:40.186Z",
     "generator": "scripts/build-from-upstream.mjs"
   }
 }

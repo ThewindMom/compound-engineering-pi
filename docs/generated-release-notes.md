@@ -1,16 +1,17 @@
-# Upstream sync: compound-engineering-v2.66.1
+# Upstream sync: compound-engineering-v3.13.1
 
-- Upstream release: https://github.com/EveryInc/compound-engineering-plugin/releases/tag/compound-engineering-v2.66.1
+- Upstream release: https://github.com/EveryInc/compound-engineering-plugin/releases/tag/compound-engineering-v3.13.1
 - Source of truth: https://github.com/EveryInc/compound-engineering-plugin
-- Generated prompts: 42
-- Generated agents: 49
-- Copied skills: 42
+- Generated prompts: 39
+- Generated agents: 43
+- Copied skills: 39
 
 ## Upstream release body
 
-## [2.66.1](https://github.com/EveryInc/compound-engineering-plugin/compare/compound-engineering-v2.66.0...compound-engineering-v2.66.1) (2026-04-16)
+## [3.13.1](https://github.com/EveryInc/compound-engineering-plugin/compare/compound-engineering-v3.13.0...compound-engineering-v3.13.1) (2026-06-17)
 
 
 ### Bug Fixes
 
-* **ce-compound, ce-compound-refresh:** use injected memory block ([#569](https://github.com/EveryInc/compound-engineering-plugin/issues/569)) ([0b3d4b2](https://github.com/EveryInc/compound-engineering-plugin/commit/0b3d4b283c8e3165931816607cf86017d8273bbe))
+* **lfg:** run ce-simplify-code before review; clarify report-only contract ([#952](https://github.com/EveryInc/compound-engineering-plugin/issues/952)) ([d8d688b](https://github.com/EveryInc/compound-engineering-plugin/commit/d8d688b30d97eb5efc3142cec16dd8314ac48e47))
+* **proof:** replace HITL review loop with one-way publish ([#957](https://github.com/EveryInc/compound-engineering-plugin/issues/957)) ([68dd787](https://github.com/EveryInc/compound-engineering-plugin/commit/68dd787f98c734f57f6e40f1e8a6e29cb8584719))

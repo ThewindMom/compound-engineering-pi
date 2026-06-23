@@ -1,6 +1,6 @@
 {
   "name": "compound-engineering-pi",
-  "version": "2.66.1",
+  "version": "3.13.1",
   "type": "module",
   "private": false,
   "description": "Maintained Pi adapter for Compound Engineering with model-aware subagents and automated upstream sync.",
